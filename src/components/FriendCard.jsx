@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import { LANGUAGE_TO_FLAG } from "../constants";
 import { MapPin } from "lucide-react";
-import User from "../../../backend/src/models/User";
 
 const FriendCard = ({ friend }) => {
   return (
