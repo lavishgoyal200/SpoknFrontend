@@ -62,7 +62,14 @@ const isOnboarded = authUser?.isOnboarded
           <Navigate to={!isAuthenticated ? "/" : "/onboarding"}/>
         ) } />
         
-        <Route path="/call/:id" element={isAuthenticated && isOnboarded ? (<CallPage />) : (<Navigate to={!isAuthenticated ? "/" : "/onboardimg"} />) } />
+        <Route path="/call/:id" element={
+          isAuthenticated && isOnboarded ? (
+            <CallPage />
+          ) : (
+            <Navigate to={!isAuthenticated ? "/" : "/onboarding"} />
+          )
+        } />
+
 
         <Route path="/notifications" element={isAuthenticated && isOnboarded ? (
           <Layout showSidebar={true}>
