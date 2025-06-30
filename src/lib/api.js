@@ -60,10 +60,13 @@ export async function acceptFriendRequest(requestId) {
   return response.data;
 }
 
-export async function getStreamToken() {
-  const response = await axiosInstance.get("/chat/token");
+export async function getStreamToken(userId, name, image) {
+  const response = await axiosInstance.get("/chat/token", {
+    params: { userId, name, image }
+  });
   return response.data;
 }
+
 
 //for streak functionality
 
